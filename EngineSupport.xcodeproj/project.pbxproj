@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D91A04F137DE5650006A456 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D91A04E137DE5650006A456 /* UIKit.framework */; };
+		1D91A051137DE5650006A456 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D91A050137DE5650006A456 /* Foundation.framework */; };
+		1D91A053137DE5650006A456 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D91A052137DE5650006A456 /* CoreGraphics.framework */; };
+		1D91A059137DE5650006A456 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D91A057137DE5650006A456 /* InfoPlist.strings */; };
+		1D91A05C137DE5650006A456 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D91A05B137DE5650006A456 /* main.m */; };
+		1D91A05F137DE5650006A456 /* EngineSupportAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D91A05E137DE5650006A456 /* EngineSupportAppDelegate.m */; };
+		1D91A062137DE5650006A456 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D91A060137DE5650006A456 /* MainWindow.xib */; };
+		1D91A065137DE5650006A456 /* EngineSupportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D91A064137DE5650006A456 /* EngineSupportViewController.m */; };
+		1D91A068137DE5650006A456 /* EngineSupportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D91A066137DE5650006A456 /* EngineSupportViewController.xib */; };
+		1D91A0A0137DE84D0006A456 /* EngineSupportTest-Parameters.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D91A09F137DE84D0006A456 /* EngineSupportTest-Parameters.plist */; };
+		1D91A0BA137DEB1F0006A456 /* NSDictionary+Parameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D91A0A3137DEB1F0006A456 /* NSDictionary+Parameters.m */; };
+		1D91A0BB137DEB1F0006A456 /* NSFileManager+Paths.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D91A0A5137DEB1F0006A456 /* NSFileManager+Paths.m */; };
+		1D91A0BC137DEB1F0006A456 /* BoolParameterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D91A0A9137DEB1F0006A456 /* BoolParameterCell.xib */; };
+		1D91A0BD137DEB1F0006A456 /* BoolParameterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D91A0AB137DEB1F0006A456 /* BoolParameterController.m */; };
+		1D91A0BE137DEB1F0006A456 /* BoolParameterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D91A0AC137DEB1F0006A456 /* BoolParameterController.xib */; };
+		1D91A0BF137DEB1F0006A456 /* BoolParameterDescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D91A0AD137DEB1F0006A456 /* BoolParameterDescriptionCell.xib */; };
+		1D91A0C0137DEB1F0006A456 /* NumberParameterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D91A0AF137DEB1F0006A456 /* NumberParameterCell.xib */; };
+		1D91A0C1137DEB1F0006A456 /* NumberParameterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D91A0B1137DEB1F0006A456 /* NumberParameterController.m */; };
+		1D91A0C2137DEB1F0006A456 /* NumberParameterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D91A0B2137DEB1F0006A456 /* NumberParameterController.xib */; };
+		1D91A0C3137DEB1F0006A456 /* NumberParameterDescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D91A0B3137DEB1F0006A456 /* NumberParameterDescriptionCell.xib */; };
+		1D91A0C4137DEB1F0006A456 /* ParameterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D91A0B4137DEB1F0006A456 /* ParameterCell.xib */; };
+		1D91A0C5137DEB1F0006A456 /* Parameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D91A0B6137DEB1F0006A456 /* Parameters.m */; };
+		1D91A0C6137DEB1F0006A456 /* ParametersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D91A0B8137DEB1F0006A456 /* ParametersViewController.m */; };
+		1D91A0C7137DEB1F0006A456 /* ParametersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D91A0B9137DEB1F0006A456 /* ParametersViewController.xib */; };
+		1D91A0CB137DEDD90006A456 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D91A0CA137DEDD90006A456 /* Utilities.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D91A04A137DE5650006A456 /* EngineSupport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EngineSupport.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D91A04E137DE5650006A456 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1D91A050137DE5650006A456 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D91A052137DE5650006A456 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1D91A056137DE5650006A456 /* EngineSupport-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EngineSupport-Info.plist"; sourceTree = "<group>"; };
+		1D91A058137DE5650006A456 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D91A05A137DE5650006A456 /* EngineSupport-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EngineSupport-Prefix.pch"; sourceTree = "<group>"; };
+		1D91A05B137DE5650006A456 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1D91A05D137DE5650006A456 /* EngineSupportAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EngineSupportAppDelegate.h; sourceTree = "<group>"; };
+		1D91A05E137DE5650006A456 /* EngineSupportAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EngineSupportAppDelegate.m; sourceTree = "<group>"; };
+		1D91A061137DE5650006A456 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		1D91A063137DE5650006A456 /* EngineSupportViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EngineSupportViewController.h; sourceTree = "<group>"; };
+		1D91A064137DE5650006A456 /* EngineSupportViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EngineSupportViewController.m; sourceTree = "<group>"; };
+		1D91A067137DE5650006A456 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/EngineSupportViewController.xib; sourceTree = "<group>"; };
+		1D91A09D137DE8370006A456 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		1D91A09F137DE84D0006A456 /* EngineSupportTest-Parameters.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "EngineSupportTest-Parameters.plist"; sourceTree = "<group>"; };
+		1D91A0A2137DEB1F0006A456 /* NSDictionary+Parameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Parameters.h"; sourceTree = "<group>"; };
+		1D91A0A3137DEB1F0006A456 /* NSDictionary+Parameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Parameters.m"; sourceTree = "<group>"; };
+		1D91A0A4137DEB1F0006A456 /* NSFileManager+Paths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Paths.h"; sourceTree = "<group>"; };
+		1D91A0A5137DEB1F0006A456 /* NSFileManager+Paths.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Paths.m"; sourceTree = "<group>"; };
+		1D91A0A9137DEB1F0006A456 /* BoolParameterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoolParameterCell.xib; sourceTree = "<group>"; };
+		1D91A0AA137DEB1F0006A456 /* BoolParameterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoolParameterController.h; sourceTree = "<group>"; };
+		1D91A0AB137DEB1F0006A456 /* BoolParameterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoolParameterController.m; sourceTree = "<group>"; };
+		1D91A0AC137DEB1F0006A456 /* BoolParameterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoolParameterController.xib; sourceTree = "<group>"; };
+		1D91A0AD137DEB1F0006A456 /* BoolParameterDescriptionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoolParameterDescriptionCell.xib; sourceTree = "<group>"; };
+		1D91A0AF137DEB1F0006A456 /* NumberParameterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NumberParameterCell.xib; sourceTree = "<group>"; };
+		1D91A0B0137DEB1F0006A456 /* NumberParameterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberParameterController.h; sourceTree = "<group>"; };
+		1D91A0B1137DEB1F0006A456 /* NumberParameterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberParameterController.m; sourceTree = "<group>"; };
+		1D91A0B2137DEB1F0006A456 /* NumberParameterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NumberParameterController.xib; sourceTree = "<group>"; };
+		1D91A0B3137DEB1F0006A456 /* NumberParameterDescriptionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NumberParameterDescriptionCell.xib; sourceTree = "<group>"; };
+		1D91A0B4137DEB1F0006A456 /* ParameterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParameterCell.xib; sourceTree = "<group>"; };
+		1D91A0B5137DEB1F0006A456 /* Parameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parameters.h; sourceTree = "<group>"; };
+		1D91A0B6137DEB1F0006A456 /* Parameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Parameters.m; sourceTree = "<group>"; };
+		1D91A0B7137DEB1F0006A456 /* ParametersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParametersViewController.h; sourceTree = "<group>"; };
+		1D91A0B8137DEB1F0006A456 /* ParametersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParametersViewController.m; sourceTree = "<group>"; };
+		1D91A0B9137DEB1F0006A456 /* ParametersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParametersViewController.xib; sourceTree = "<group>"; };
+		1D91A0C9137DEDD90006A456 /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+		1D91A0CA137DEDD90006A456 /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D91A047137DE5650006A456 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D91A04F137DE5650006A456 /* UIKit.framework in Frameworks */,
+				1D91A051137DE5650006A456 /* Foundation.framework in Frameworks */,
+				1D91A053137DE5650006A456 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D91A03F137DE5650006A456 = {
+			isa = PBXGroup;
+			children = (
+				1D91A054137DE5650006A456 /* EngineSupport */,
+				1D91A04D137DE5650006A456 /* Frameworks */,
+				1D91A04B137DE5650006A456 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1D91A04B137DE5650006A456 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D91A04A137DE5650006A456 /* EngineSupport.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1D91A04D137DE5650006A456 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D91A04E137DE5650006A456 /* UIKit.framework */,
+				1D91A050137DE5650006A456 /* Foundation.framework */,
+				1D91A052137DE5650006A456 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1D91A054137DE5650006A456 /* EngineSupport */ = {
+			isa = PBXGroup;
+			children = (
+				1D91A0C8137DEDD90006A456 /* Utilities */,
+				1D91A0A1137DEB1F0006A456 /* Categories */,
+				1D91A0A6137DEB1F0006A456 /* Parameters */,
+				1D91A05D137DE5650006A456 /* EngineSupportAppDelegate.h */,
+				1D91A05E137DE5650006A456 /* EngineSupportAppDelegate.m */,
+				1D91A060137DE5650006A456 /* MainWindow.xib */,
+				1D91A063137DE5650006A456 /* EngineSupportViewController.h */,
+				1D91A064137DE5650006A456 /* EngineSupportViewController.m */,
+				1D91A066137DE5650006A456 /* EngineSupportViewController.xib */,
+				1D91A055137DE5650006A456 /* Supporting Files */,
+			);
+			path = EngineSupport;
+			sourceTree = "<group>";
+		};
+		1D91A055137DE5650006A456 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1D91A09E137DE83B0006A456 /* Resources */,
+				1D91A09D137DE8370006A456 /* Constants.h */,
+				1D91A056137DE5650006A456 /* EngineSupport-Info.plist */,
+				1D91A057137DE5650006A456 /* InfoPlist.strings */,
+				1D91A05A137DE5650006A456 /* EngineSupport-Prefix.pch */,
+				1D91A05B137DE5650006A456 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1D91A09E137DE83B0006A456 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1D91A09F137DE84D0006A456 /* EngineSupportTest-Parameters.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1D91A0A1137DEB1F0006A456 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				1D91A0A2137DEB1F0006A456 /* NSDictionary+Parameters.h */,
+				1D91A0A3137DEB1F0006A456 /* NSDictionary+Parameters.m */,
+				1D91A0A4137DEB1F0006A456 /* NSFileManager+Paths.h */,
+				1D91A0A5137DEB1F0006A456 /* NSFileManager+Paths.m */,
+			);
+			name = Categories;
+			path = Sources/Categories;
+			sourceTree = "<group>";
+		};
+		1D91A0A6137DEB1F0006A456 /* Parameters */ = {
+			isa = PBXGroup;
+			children = (
+				1D91A0A7137DEB1F0006A456 /* Parameter Details */,
+				1D91A0B4137DEB1F0006A456 /* ParameterCell.xib */,
+				1D91A0B5137DEB1F0006A456 /* Parameters.h */,
+				1D91A0B6137DEB1F0006A456 /* Parameters.m */,
+				1D91A0B7137DEB1F0006A456 /* ParametersViewController.h */,
+				1D91A0B8137DEB1F0006A456 /* ParametersViewController.m */,
+				1D91A0B9137DEB1F0006A456 /* ParametersViewController.xib */,
+			);
+			name = Parameters;
+			path = Sources/Parameters;
+			sourceTree = "<group>";
+		};
+		1D91A0A7137DEB1F0006A456 /* Parameter Details */ = {
+			isa = PBXGroup;
+			children = (
+				1D91A0A8137DEB1F0006A456 /* Bool Parameter */,
+				1D91A0AE137DEB1F0006A456 /* Number Parameter */,
+			);
+			path = "Parameter Details";
+			sourceTree = "<group>";
+		};
+		1D91A0A8137DEB1F0006A456 /* Bool Parameter */ = {
+			isa = PBXGroup;
+			children = (
+				1D91A0A9137DEB1F0006A456 /* BoolParameterCell.xib */,
+				1D91A0AA137DEB1F0006A456 /* BoolParameterController.h */,
+				1D91A0AB137DEB1F0006A456 /* BoolParameterController.m */,
+				1D91A0AC137DEB1F0006A456 /* BoolParameterController.xib */,
+				1D91A0AD137DEB1F0006A456 /* BoolParameterDescriptionCell.xib */,
+			);
+			path = "Bool Parameter";
+			sourceTree = "<group>";
+		};
+		1D91A0AE137DEB1F0006A456 /* Number Parameter */ = {
+			isa = PBXGroup;
+			children = (
+				1D91A0AF137DEB1F0006A456 /* NumberParameterCell.xib */,
+				1D91A0B0137DEB1F0006A456 /* NumberParameterController.h */,
+				1D91A0B1137DEB1F0006A456 /* NumberParameterController.m */,
+				1D91A0B2137DEB1F0006A456 /* NumberParameterController.xib */,
+				1D91A0B3137DEB1F0006A456 /* NumberParameterDescriptionCell.xib */,
+			);
+			path = "Number Parameter";
+			sourceTree = "<group>";
+		};
+		1D91A0C8137DEDD90006A456 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1D91A0C9137DEDD90006A456 /* Utilities.h */,
+				1D91A0CA137DEDD90006A456 /* Utilities.m */,
+			);
+			name = Utilities;
+			path = Sources/Utilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D91A049137DE5650006A456 /* EngineSupport */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D91A06B137DE5650006A456 /* Build configuration list for PBXNativeTarget "EngineSupport" */;
+			buildPhases = (
+				1D91A046137DE5650006A456 /* Sources */,
+				1D91A047137DE5650006A456 /* Frameworks */,
+				1D91A048137DE5650006A456 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EngineSupport;
+			productName = EngineSupport;
+			productReference = 1D91A04A137DE5650006A456 /* EngineSupport.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1D91A041137DE5650006A456 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1D91A044137DE5650006A456 /* Build configuration list for PBXProject "EngineSupport" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1D91A03F137DE5650006A456;
+			productRefGroup = 1D91A04B137DE5650006A456 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D91A049137DE5650006A456 /* EngineSupport */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D91A048137DE5650006A456 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D91A059137DE5650006A456 /* InfoPlist.strings in Resources */,
+				1D91A062137DE5650006A456 /* MainWindow.xib in Resources */,
+				1D91A068137DE5650006A456 /* EngineSupportViewController.xib in Resources */,
+				1D91A0A0137DE84D0006A456 /* EngineSupportTest-Parameters.plist in Resources */,
+				1D91A0BC137DEB1F0006A456 /* BoolParameterCell.xib in Resources */,
+				1D91A0BE137DEB1F0006A456 /* BoolParameterController.xib in Resources */,
+				1D91A0BF137DEB1F0006A456 /* BoolParameterDescriptionCell.xib in Resources */,
+				1D91A0C0137DEB1F0006A456 /* NumberParameterCell.xib in Resources */,
+				1D91A0C2137DEB1F0006A456 /* NumberParameterController.xib in Resources */,
+				1D91A0C3137DEB1F0006A456 /* NumberParameterDescriptionCell.xib in Resources */,
+				1D91A0C4137DEB1F0006A456 /* ParameterCell.xib in Resources */,
+				1D91A0C7137DEB1F0006A456 /* ParametersViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D91A046137DE5650006A456 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D91A05C137DE5650006A456 /* main.m in Sources */,
+				1D91A05F137DE5650006A456 /* EngineSupportAppDelegate.m in Sources */,
+				1D91A065137DE5650006A456 /* EngineSupportViewController.m in Sources */,
+				1D91A0BA137DEB1F0006A456 /* NSDictionary+Parameters.m in Sources */,
+				1D91A0BB137DEB1F0006A456 /* NSFileManager+Paths.m in Sources */,
+				1D91A0BD137DEB1F0006A456 /* BoolParameterController.m in Sources */,
+				1D91A0C1137DEB1F0006A456 /* NumberParameterController.m in Sources */,
+				1D91A0C5137DEB1F0006A456 /* Parameters.m in Sources */,
+				1D91A0C6137DEB1F0006A456 /* ParametersViewController.m in Sources */,
+				1D91A0CB137DEDD90006A456 /* Utilities.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1D91A057137DE5650006A456 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D91A058137DE5650006A456 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1D91A060137DE5650006A456 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D91A061137DE5650006A456 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		1D91A066137DE5650006A456 /* EngineSupportViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D91A067137DE5650006A456 /* en */,
+			);
+			name = EngineSupportViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D91A069137DE5650006A456 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1D91A06A137DE5650006A456 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		1D91A06C137DE5650006A456 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EngineSupport/EngineSupport-Prefix.pch";
+				INFOPLIST_FILE = "EngineSupport/EngineSupport-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1D91A06D137DE5650006A456 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EngineSupport/EngineSupport-Prefix.pch";
+				INFOPLIST_FILE = "EngineSupport/EngineSupport-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D91A044137DE5650006A456 /* Build configuration list for PBXProject "EngineSupport" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D91A069137DE5650006A456 /* Debug */,
+				1D91A06A137DE5650006A456 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D91A06B137DE5650006A456 /* Build configuration list for PBXNativeTarget "EngineSupport" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D91A06C137DE5650006A456 /* Debug */,
+				1D91A06D137DE5650006A456 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1D91A041137DE5650006A456 /* Project object */;
+}

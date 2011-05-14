@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ES_TEST_PARAMETER_BOOL</key>
+	<dict>
+		<key>Parameters::Key::ParameterDescription</key>
+		<string>This is a BOOL Parameter.</string>
+		<key>Parameters::Key::ParameterName</key>
+		<string>Bool Parameter</string>
+		<key>Parameters::Key::ParameterType</key>
+		<integer>0</integer>
+		<key>Parameters::Key::ParameterValue</key>
+		<true/>
+	</dict>
+	<key>ES_TEST_PARAMETER_INTEGER</key>
+	<dict>
+		<key>Parameters::Key::ParameterDescription</key>
+		<string>This is an integer parameter.</string>
+		<key>Parameters::Key::ParameterName</key>
+		<string>Integer parameter</string>
+		<key>Parameters::Key::ParameterType</key>
+		<integer>1</integer>
+		<key>Parameters::Key::ParameterValue</key>
+		<integer>30</integer>
+	</dict>
+</dict>
+</plist>
