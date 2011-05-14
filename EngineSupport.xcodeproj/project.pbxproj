@@ -35,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D2C3281137EDDCF0051925C /* EngineSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EngineSupport.h; sourceTree = "<group>"; };
 		1D91A04A137DE5650006A456 /* EngineSupport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EngineSupport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D91A04E137DE5650006A456 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1D91A050137DE5650006A456 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -219,6 +220,7 @@
 			children = (
 				1D91A0C9137DEDD90006A456 /* Utilities.h */,
 				1D91A0CA137DEDD90006A456 /* Utilities.m */,
+				1D2C3281137EDDCF0051925C /* EngineSupport.h */,
 			);
 			name = Utilities;
 			path = Sources/Utilities;
@@ -415,6 +417,7 @@
 				1D91A06D137DE5650006A456 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
