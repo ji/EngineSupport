@@ -194,10 +194,10 @@
 		1D91A0A8137DEB1F0006A456 /* Bool Parameter */ = {
 			isa = PBXGroup;
 			children = (
-				1D91A0A9137DEB1F0006A456 /* BoolParameterCell.xib */,
 				1D91A0AA137DEB1F0006A456 /* BoolParameterController.h */,
 				1D91A0AB137DEB1F0006A456 /* BoolParameterController.m */,
 				1D91A0AC137DEB1F0006A456 /* BoolParameterController.xib */,
+				1D91A0A9137DEB1F0006A456 /* BoolParameterCell.xib */,
 				1D91A0AD137DEB1F0006A456 /* BoolParameterDescriptionCell.xib */,
 			);
 			path = "Bool Parameter";
@@ -206,10 +206,10 @@
 		1D91A0AE137DEB1F0006A456 /* Number Parameter */ = {
 			isa = PBXGroup;
 			children = (
-				1D91A0AF137DEB1F0006A456 /* NumberParameterCell.xib */,
 				1D91A0B0137DEB1F0006A456 /* NumberParameterController.h */,
 				1D91A0B1137DEB1F0006A456 /* NumberParameterController.m */,
 				1D91A0B2137DEB1F0006A456 /* NumberParameterController.xib */,
+				1D91A0AF137DEB1F0006A456 /* NumberParameterCell.xib */,
 				1D91A0B3137DEB1F0006A456 /* NumberParameterDescriptionCell.xib */,
 			);
 			path = "Number Parameter";
