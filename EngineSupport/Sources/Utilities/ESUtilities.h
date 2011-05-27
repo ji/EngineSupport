@@ -26,11 +26,12 @@
 #define RELEASE_AND_NIL(x) [x release], x = nil
 #define CALCULATE_TIMER_FOR_FPS(x) 1.0f / x
 
-@interface Utilities : NSObject {
-    
+@interface ESUtilities : NSObject {    
 }
 
 + (NSString *)parametersPlistPathForFilename:(NSString *)_filename;
 + (NSString *)parametersPlistPath;
++ (NSString *)archivePathForParameterName:(NSString *)_parameterName;
++ (NSString *)parametersDirectory;
 
 @end

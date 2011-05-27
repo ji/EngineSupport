@@ -31,7 +31,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [Parameters sharedInstance].parametersPlistFilename = @"EngineSupportTest-Parameters.plist";
+    [Parameters sharedInstance].parametersDefinitionFilename = @"EngineSupportTest-Parameters.plist";
     
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];

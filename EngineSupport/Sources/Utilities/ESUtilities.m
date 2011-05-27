@@ -21,10 +21,10 @@
  ************************************************************************************/
 
 
-#import "Utilities.h"
+#import "ESUtilities.h"
 #import "NSFileManager+Paths.h"
 
-@implementation Utilities
+@implementation ESUtilities
 
 + (NSString *)parametersPlistPathForFilename:(NSString *)_filename
 {
@@ -41,6 +41,30 @@
 }
 
 + (NSString *)parametersPlistPath
+{
+    return [[NSFileManager defaultManager] cachePathWithDirectory:@"Parameters"];
+}
+
++ (NSString *)archivePathForParameterName:(NSString *)_parameterName
+{
+    NSString *archiveFile = @"parameter.archive";
+    
+    NSString *path =[[NSFileManager defaultManager] cachePathWithDirectory:@"Parameters"];
+    path = [path stringByAppendingPathComponent:_parameterName];
+    
+    if (![[NSFileManager defaultManager] fileExistsAtPath:path]) {
+        [[NSFileManager defaultManager] createDirectoryAtPath:path
+                                  withIntermediateDirectories:YES
+                                                   attributes:nil
+                                                        error:nil];
+    }
+    
+    path = [path stringByAppendingPathComponent:archiveFile];
+    
+    return path;
+}
+
++ (NSString *)parametersDirectory
 {
     return [[NSFileManager defaultManager] cachePathWithDirectory:@"Parameters"];
 }

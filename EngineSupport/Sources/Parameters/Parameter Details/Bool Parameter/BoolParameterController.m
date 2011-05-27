@@ -39,7 +39,7 @@
 @synthesize parameter;
 @synthesize parameterSwitch;
 
-- (id)initWithParameter:(NSMutableDictionary *)_parameter
+- (id)initWithParameter:(ESParameter *)_parameter
 {
     self = [super initWithNibName:@"BoolParameterController" bundle:nil];
     if (self) {
@@ -77,7 +77,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    self.parameterSwitch.on = [[self.parameter valueForKey:KEY_PARAMETER_VALUE] boolValue];
+    self.parameterSwitch.on = [self.parameter.parameterValue boolValue];
 }
 
 - (void)viewDidUnload
@@ -164,7 +164,7 @@
 
 - (IBAction)valueChanged
 {
-    [self.parameter setValue:[NSNumber numberWithBool:self.parameterSwitch.on] forKey:KEY_PARAMETER_VALUE];
+    self.parameter.parameterValue = [NSNumber numberWithBool:self.parameterSwitch.on];
 }
 
 #pragma mark - Private category methods
@@ -177,7 +177,7 @@
     UITableViewCell *cell = (UITableViewCell *)[bundleResources objectAtIndex:0];
     
     UILabel *parameterNameLabel = (UILabel *)[cell viewWithTag:PARAMETER_NAME_LABEL_TAG];
-    parameterNameLabel.text = [parameter valueForKey:KEY_PARAMETER_NAME];
+    parameterNameLabel.text = parameter.parameterName;
     
     return cell;
 }
@@ -190,7 +190,7 @@
     UITableViewCell *cell = (UITableViewCell *)[bundleResources objectAtIndex:0];
     
     UITextView *parameterDescriptionView = (UITextView *)[cell viewWithTag:PARAMETER_DESCRIPTION_VIEW_TAG];
-    parameterDescriptionView.text = [parameter valueForKey:KEY_PARAMETER_DESCRIPTION];
+    parameterDescriptionView.text = parameter.parameterDescription;
     
     return cell;
 }

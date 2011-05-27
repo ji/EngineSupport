@@ -26,16 +26,16 @@
 
 @interface BoolParameterController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
     UITableView     *tableView;
-    NSMutableDictionary    *parameter;
+    ESParameter     *parameter;
     UISwitch        *parameterSwitch;
 }
 
-- (id)initWithParameter:(NSMutableDictionary *)_parameter;
+- (id)initWithParameter:(ESParameter *)_parameter;
 - (IBAction)valueChanged;
 
 @property (nonatomic, retain) IBOutlet UITableView *tableView;
 @property (nonatomic, retain) IBOutlet UISwitch    *parameterSwitch;
 
-@property (nonatomic, retain) NSMutableDictionary *parameter;
+@property (nonatomic, retain) ESParameter *parameter;
 
 @end

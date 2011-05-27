@@ -156,7 +156,7 @@
 
 - (void)textFieldDidEndEditing:(UITextField *)_textField
 {
-    [self.parameter setValue:_textField.text forKey:KEY_PARAMETER_VALUE];
+    self.parameter.parameterValue = _textField.text;
 }
 
 #pragma mark - Private category methods
@@ -169,10 +169,10 @@
     UITableViewCell *cell = (UITableViewCell *)[bundleResources objectAtIndex:0];
     
     UILabel *parameterNameLabel = (UILabel *)[cell viewWithTag:PARAMETER_NAME_LABEL_TAG];
-    parameterNameLabel.text = [parameter valueForKey:KEY_PARAMETER_NAME];
+    parameterNameLabel.text = [self.parameter parameterName];
     
     UITextField *parameterValue = (UITextField *)[cell viewWithTag:PARAMETER_VALUE_TEXTFIELD_TAG];
-    parameterValue.text = [NSString stringWithFormat:@"%d", [[parameter valueForKey:KEY_PARAMETER_VALUE] intValue]];
+    parameterValue.text = [NSString stringWithFormat:@"%d", [[self.parameter parameterValue] intValue]];
     
     return cell;
 }
@@ -184,7 +184,7 @@
                                                            options:nil];
     UITableViewCell *cell = (UITableViewCell *)[bundleResources objectAtIndex:0];
     UITextView *parameterDescriptionView = (UITextView *)[cell viewWithTag:PARAMETER_DESCRIPTION_VIEW_TAG];
-    parameterDescriptionView.text = [parameter valueForKey:KEY_PARAMETER_DESCRIPTION];
+    parameterDescriptionView.text = [self.parameter parameterDescription];
     
     return cell;
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D5BF3971382DF8900012CA7 /* ESParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5BF3961382DF8900012CA7 /* ESParameter.m */; };
 		1D91A04F137DE5650006A456 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D91A04E137DE5650006A456 /* UIKit.framework */; };
 		1D91A051137DE5650006A456 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D91A050137DE5650006A456 /* Foundation.framework */; };
 		1D91A053137DE5650006A456 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D91A052137DE5650006A456 /* CoreGraphics.framework */; };
@@ -17,7 +18,6 @@
 		1D91A065137DE5650006A456 /* EngineSupportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D91A064137DE5650006A456 /* EngineSupportViewController.m */; };
 		1D91A068137DE5650006A456 /* EngineSupportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D91A066137DE5650006A456 /* EngineSupportViewController.xib */; };
 		1D91A0A0137DE84D0006A456 /* EngineSupportTest-Parameters.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D91A09F137DE84D0006A456 /* EngineSupportTest-Parameters.plist */; };
-		1D91A0BA137DEB1F0006A456 /* NSDictionary+Parameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D91A0A3137DEB1F0006A456 /* NSDictionary+Parameters.m */; };
 		1D91A0BB137DEB1F0006A456 /* NSFileManager+Paths.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D91A0A5137DEB1F0006A456 /* NSFileManager+Paths.m */; };
 		1D91A0BC137DEB1F0006A456 /* BoolParameterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D91A0A9137DEB1F0006A456 /* BoolParameterCell.xib */; };
 		1D91A0BD137DEB1F0006A456 /* BoolParameterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D91A0AB137DEB1F0006A456 /* BoolParameterController.m */; };
@@ -31,11 +31,13 @@
 		1D91A0C5137DEB1F0006A456 /* Parameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D91A0B6137DEB1F0006A456 /* Parameters.m */; };
 		1D91A0C6137DEB1F0006A456 /* ParametersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D91A0B8137DEB1F0006A456 /* ParametersViewController.m */; };
 		1D91A0C7137DEB1F0006A456 /* ParametersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D91A0B9137DEB1F0006A456 /* ParametersViewController.xib */; };
-		1D91A0CB137DEDD90006A456 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D91A0CA137DEDD90006A456 /* Utilities.m */; };
+		1D91A0CB137DEDD90006A456 /* ESUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D91A0CA137DEDD90006A456 /* ESUtilities.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1D2C3281137EDDCF0051925C /* EngineSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EngineSupport.h; sourceTree = "<group>"; };
+		1D5BF3951382DF8900012CA7 /* ESParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESParameter.h; sourceTree = "<group>"; };
+		1D5BF3961382DF8900012CA7 /* ESParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESParameter.m; sourceTree = "<group>"; };
 		1D91A04A137DE5650006A456 /* EngineSupport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EngineSupport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D91A04E137DE5650006A456 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1D91A050137DE5650006A456 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -52,8 +54,6 @@
 		1D91A067137DE5650006A456 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/EngineSupportViewController.xib; sourceTree = "<group>"; };
 		1D91A09D137DE8370006A456 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		1D91A09F137DE84D0006A456 /* EngineSupportTest-Parameters.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "EngineSupportTest-Parameters.plist"; sourceTree = "<group>"; };
-		1D91A0A2137DEB1F0006A456 /* NSDictionary+Parameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Parameters.h"; sourceTree = "<group>"; };
-		1D91A0A3137DEB1F0006A456 /* NSDictionary+Parameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Parameters.m"; sourceTree = "<group>"; };
 		1D91A0A4137DEB1F0006A456 /* NSFileManager+Paths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Paths.h"; sourceTree = "<group>"; };
 		1D91A0A5137DEB1F0006A456 /* NSFileManager+Paths.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Paths.m"; sourceTree = "<group>"; };
 		1D91A0A9137DEB1F0006A456 /* BoolParameterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoolParameterCell.xib; sourceTree = "<group>"; };
@@ -72,8 +72,8 @@
 		1D91A0B7137DEB1F0006A456 /* ParametersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParametersViewController.h; sourceTree = "<group>"; };
 		1D91A0B8137DEB1F0006A456 /* ParametersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParametersViewController.m; sourceTree = "<group>"; };
 		1D91A0B9137DEB1F0006A456 /* ParametersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParametersViewController.xib; sourceTree = "<group>"; };
-		1D91A0C9137DEDD90006A456 /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
-		1D91A0CA137DEDD90006A456 /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
+		1D91A0C9137DEDD90006A456 /* ESUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; path = ESUtilities.h; sourceTree = "<group>"; };
+		1D91A0CA137DEDD90006A456 /* ESUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESUtilities.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,8 +158,6 @@
 		1D91A0A1137DEB1F0006A456 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				1D91A0A2137DEB1F0006A456 /* NSDictionary+Parameters.h */,
-				1D91A0A3137DEB1F0006A456 /* NSDictionary+Parameters.m */,
 				1D91A0A4137DEB1F0006A456 /* NSFileManager+Paths.h */,
 				1D91A0A5137DEB1F0006A456 /* NSFileManager+Paths.m */,
 			);
@@ -177,6 +175,8 @@
 				1D91A0B7137DEB1F0006A456 /* ParametersViewController.h */,
 				1D91A0B8137DEB1F0006A456 /* ParametersViewController.m */,
 				1D91A0B9137DEB1F0006A456 /* ParametersViewController.xib */,
+				1D5BF3951382DF8900012CA7 /* ESParameter.h */,
+				1D5BF3961382DF8900012CA7 /* ESParameter.m */,
 			);
 			name = Parameters;
 			path = Sources/Parameters;
@@ -218,8 +218,8 @@
 		1D91A0C8137DEDD90006A456 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				1D91A0C9137DEDD90006A456 /* Utilities.h */,
-				1D91A0CA137DEDD90006A456 /* Utilities.m */,
+				1D91A0C9137DEDD90006A456 /* ESUtilities.h */,
+				1D91A0CA137DEDD90006A456 /* ESUtilities.m */,
 				1D2C3281137EDDCF0051925C /* EngineSupport.h */,
 			);
 			name = Utilities;
@@ -298,13 +298,13 @@
 				1D91A05C137DE5650006A456 /* main.m in Sources */,
 				1D91A05F137DE5650006A456 /* EngineSupportAppDelegate.m in Sources */,
 				1D91A065137DE5650006A456 /* EngineSupportViewController.m in Sources */,
-				1D91A0BA137DEB1F0006A456 /* NSDictionary+Parameters.m in Sources */,
 				1D91A0BB137DEB1F0006A456 /* NSFileManager+Paths.m in Sources */,
 				1D91A0BD137DEB1F0006A456 /* BoolParameterController.m in Sources */,
 				1D91A0C1137DEB1F0006A456 /* NumberParameterController.m in Sources */,
 				1D91A0C5137DEB1F0006A456 /* Parameters.m in Sources */,
 				1D91A0C6137DEB1F0006A456 /* ParametersViewController.m in Sources */,
-				1D91A0CB137DEDD90006A456 /* Utilities.m in Sources */,
+				1D91A0CB137DEDD90006A456 /* ESUtilities.m in Sources */,
+				1D5BF3971382DF8900012CA7 /* ESParameter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

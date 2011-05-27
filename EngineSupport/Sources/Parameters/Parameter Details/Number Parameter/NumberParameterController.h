@@ -27,12 +27,12 @@
                                        <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate> 
 {
     UITableView *tableView;
-    NSMutableDictionary *parameter;
+    ESParameter *parameter;
     UITextField *textField;
 }
 
 @property (nonatomic, retain) IBOutlet UITableView *tableView;
 @property (nonatomic, retain) IBOutlet UITextField *textField;
-@property (nonatomic, retain) NSMutableDictionary  *parameter;
+@property (nonatomic, retain) ESParameter  *parameter;
 
 @end

@@ -27,7 +27,7 @@
 
 @interface ParametersViewController ()
 
-- (UIViewController *)parameterDetailViewControllerForParameter:(NSMutableDictionary *)_parameter;
+- (UIViewController *)parameterDetailViewControllerForParameter:(ESParameter *)_parameter;
 
 @end
 
@@ -78,7 +78,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // TODO: Handle row selection and display details inside a navigation controller.
-    NSMutableDictionary *parameter = [[[Parameters sharedInstance].parameters allValues] objectAtIndex:indexPath.row];
+    ESParameter *parameter = [[[Parameters sharedInstance].parameters allValues] objectAtIndex:indexPath.row];
     UIViewController *vc = [self parameterDetailViewControllerForParameter:parameter];
     [self.navigationController pushViewController:vc animated:YES];
 }
@@ -108,7 +108,7 @@
     if (nil == cell) {
         NSArray *bundleResources = [[NSBundle mainBundle] loadNibNamed:@"ParameterCell" owner:nil options:nil];
         cell = [bundleResources objectAtIndex:0];
-        NSDictionary *parameter = [[[Parameters sharedInstance].parameters allValues] objectAtIndex:indexPath.row];
+        ESParameter *parameter = [[[Parameters sharedInstance].parameters allValues] objectAtIndex:indexPath.row];
         ((UILabel *)[cell viewWithTag:0]).text = [parameter parameterName]; 
     }
     
@@ -117,7 +117,7 @@
 
 #pragma mark - Private category methods ()
 
-- (UIViewController *)parameterDetailViewControllerForParameter:(NSMutableDictionary *)_parameter
+- (UIViewController *)parameterDetailViewControllerForParameter:(ESParameter *)_parameter
 {
     UIViewController *vc = nil;
     

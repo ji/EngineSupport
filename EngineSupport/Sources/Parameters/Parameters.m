@@ -20,43 +20,34 @@
  * THE SOFTWARE.
  ************************************************************************************/
 
-//
-//  Parameters.m
-//  EngineSupport
-//
-//  Created by Yovoslav Ivanov on 4/26/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
-//	File created using Singleton XCode Template by Mugunth Kumar (http://blog.mugunthkumar.com)
-//  More information about this template on the post http://mk.sg/89	
-//  Permission granted to do anything, commercial/non-commercial with this file apart from removing the line/URL above
-
 #import "Parameters.h"
 
 @interface Parameters ()
 
-- (void)loadParametersFromFile:(NSString *)_filename;
-- (void)saveParametersToFile:(NSString *)_filename;
+- (void)loadParameters;
+- (ESParameter *)unarchiveParameterWithName:(NSString *)_parameterName;
 
 @end
 
 static Parameters *_instance;
+
+
 @implementation Parameters
 
-
 @synthesize parameters;
-@synthesize parametersPlistFilename;
+@synthesize parametersDefinitionFilename;
 
-- (void)setParametersPlistFilename:(NSString *)_parametersPlistFilename
+- (void)setParametersDefinitionFilename:(NSString *)_parametersPlistFilename
 {
-    [parametersPlistFilename release];
-    parametersPlistFilename = _parametersPlistFilename;
-    [parametersPlistFilename retain];
+    [parametersDefinitionFilename release];
+    parametersDefinitionFilename = _parametersPlistFilename;
+    [parametersDefinitionFilename retain];
     
-    [self loadParametersFromFile:self.parametersPlistFilename];
+    [self loadParameters];
 }
 
-#pragma mark -
-#pragma mark Singleton Methods
+
+#pragma mark - Singleton Methods
 
 + (Parameters *)sharedInstance
 {
@@ -113,32 +104,69 @@ static Parameters *_instance;
     return self;	
 }
 
-- (void)saveParameters
-{
-    [self saveParametersToFile:self.parametersPlistFilename];
-}
-
-- (NSMutableDictionary *)parameterWithName:(NSString *)_parameterName
+- (ESParameter *)parameterWithName:(NSString *)_parameterName
 {
     return [self.parameters valueForKey:_parameterName];
 }
 
 - (id)valueForParameterWithName:(NSString *)_parameterName
 {
-    return [[self parameterWithName:_parameterName] parameterValue];
+    return [self parameterWithName:_parameterName].parameterValue;
 }
+
 
 #pragma mark - Private category methods ().
 
-- (void)loadParametersFromFile:(NSString *)_filename
+- (void)loadParameters
 {
-    NSString *parametersPlistFile = [Utilities parametersPlistPathForFilename:_filename];
-    self.parameters = [NSMutableDictionary dictionaryWithContentsOfFile:parametersPlistFile];
+    self.parameters = [NSMutableDictionary dictionaryWithCapacity:0];
+    
+    NSString *definitionsFilePath = [[NSBundle mainBundle] pathForResource:self.parametersDefinitionFilename ofType:nil];
+    NSDictionary *parameterDefinitions = [NSDictionary dictionaryWithContentsOfFile:definitionsFilePath];
+    
+    for (NSString *parameterName in [parameterDefinitions allKeys]) {
+        NSString *parameterPath = [[ESUtilities parametersDirectory] stringByAppendingPathComponent:parameterName];
+        ESParameter *parameter  = nil;
+        
+        if (![[NSFileManager defaultManager] fileExistsAtPath:parameterPath]) {
+            // If the parameter does not exist in the archiving path, create an instance and archive it.
+            parameter = [ESParameter parameterWithDictionary:[parameterDefinitions objectForKey:parameterName]];
+            [self archiveParameter:parameter withName:parameterName];
+        } else {
+            // The parameter already exists and needs to be unarchived.
+            parameter = [self unarchiveParameterWithName:parameterName];            
+        }
+        
+        if (nil != parameter) {
+            // Finally add the parameter to our parameters.
+            [self.parameters setObject:parameter forKey:parameterName];
+        }
+    }
 }
 
-- (void)saveParametersToFile:(NSString *)_filename
+- (void)archiveParameter:(ESParameter *)_parameter withName:(NSString *)_parameterName
 {
-    [self.parameters writeToFile:[Utilities parametersPlistPath] atomically:YES];
+    NSString *archivePath = [ESUtilities archivePathForParameterName:_parameterName];
+    
+    if (nil == _parameter.parameterIdentifier) {
+        // If this is the first time, the parameter is being archived, set the parameter identifier to
+        // the key name of the parameter (the key name being the key, the parameter is responding to in
+        // the parameters definition property list). Otherwise the parameter would not have the right
+        // path to be archived to.
+        _parameter.parameterIdentifier = _parameterName;
+    }
+    
+    [NSKeyedArchiver archiveRootObject:_parameter toFile:archivePath];
 }
+
+- (ESParameter *)unarchiveParameterWithName:(NSString *)_parameterName
+{
+    NSString *archivePath = [ESUtilities archivePathForParameterName:_parameterName];
+    
+    ESParameter *param = [NSKeyedUnarchiver unarchiveObjectWithFile:archivePath];
+    
+    return param;
+}
+
 
 @end
