@@ -159,6 +159,12 @@
     self.parameter.parameterValue = _textField.text;
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)_textField
+{
+    [_textField resignFirstResponder];
+    return YES;
+}
+
 #pragma mark - Private category methods
 
 - (UITableViewCell *)loadParameterCell
