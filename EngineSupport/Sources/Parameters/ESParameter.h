@@ -33,9 +33,13 @@ typedef enum {
     ParameterTypeUnknown
 } ParameterType;
 
+typedef void(^UpdateOnParameterChange)(id _parameterValue);
+
 @interface ESParameter : NSObject <NSCoding> {
     NSMutableDictionary *parameterDictionary;
     NSString *parameterIdentifier;
+    
+    UpdateOnParameterChange updater;
 }
 
 @property (nonatomic, retain) NSMutableDictionary *parameterDictionary;
@@ -45,6 +49,7 @@ typedef enum {
 @property (nonatomic, assign)   id parameterValue;
 @property (nonatomic, readonly) NSString *parameterDescription;
 @property (nonatomic, retain) NSString *parameterIdentifier;
+@property (nonatomic, assign) UpdateOnParameterChange updater;
 
 + (ESParameter *)parameterWithDictionary:(NSDictionary *)_dictionary;
 

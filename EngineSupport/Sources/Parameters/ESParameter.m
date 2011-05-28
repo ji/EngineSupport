@@ -33,6 +33,7 @@
 @synthesize parameterValue;
 @synthesize parameterDescription;
 @synthesize parameterIdentifier;
+@synthesize updater;
 
 - (ParameterType)parameterType
 {
@@ -53,6 +54,7 @@
 {
     [self.parameterDictionary setValue:_parameterValue forKey:KEY_PARAMETER_VALUE];
     [[Parameters sharedInstance] archiveParameter:self withName:self.parameterIdentifier];
+    self.updater(self.parameterValue);
 }
 
 - (NSString *)parameterDescription

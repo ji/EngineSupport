@@ -33,6 +33,11 @@
 {
     [Parameters sharedInstance].parametersDefinitionFilename = @"EngineSupportTest-Parameters.plist";
     
+    ESParameter *integerParameter = [[Parameters sharedInstance] parameterWithName:@"ES_TEST_PARAMETER_INTEGER"];
+    integerParameter.updater = ^(id _parameterValue) { 
+        NSLog(@"Updater for parameter called. New Value is: %d", [_parameterValue intValue]); 
+    };
+    
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;
