@@ -13,10 +13,8 @@ a standardized UI.
 = Usage =
 
 == Installation ==
-
 # Clone the repository at github.
 # Add the contents in the Sources directory to your XCode Project.
-
 == Integrate EngineSupport functionality ==
 
 # Define your software parameters.
