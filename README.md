@@ -19,6 +19,11 @@ Installation
 ------------
 
 * Clone the repository at github.
+
+	<pre><code>
+		git@github.com:ji/EngineSupport.git
+	</code></pre>
+
 * Add the contents in the Sources directory to your XCode Project.
 
 Integrate EngineSupport functionality
