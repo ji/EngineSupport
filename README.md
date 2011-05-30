@@ -42,23 +42,23 @@ Integrate EngineSupport functionality
 
 	Showing the parameters UI:
 	<pre><code>
-			- (IBAction)showParametersView:(id)_sender
-			{
-			    if (nil == self.parametersViewController) {
-			        self.parametersViewController = [[[ParametersViewController alloc] initWithNibName:@"ParametersViewController"
-			                                                                                    bundle:nil] autorelease];
-			    }
+		- (IBAction)showParametersView:(id)_sender
+		{
+		    if (nil == self.parametersViewController) {
+		        self.parametersViewController = [[[ParametersViewController alloc] initWithNibName:@"ParametersViewController"
+		                                                                                    bundle:nil] autorelease];
+		    }
 
-			    self.navigationController = [[[UINavigationController alloc] initWithRootViewController:self.parametersViewController] 
-			                                 autorelease];
-			    UIBarButtonItem *doneButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone 
-			                                                                                    target:self
-			                                                                                    action:@selector(hideParametersView:)];
-			    self.parametersViewController.navigationItem.rightBarButtonItem = doneButtonItem;
-			    [doneButtonItem release];
+		    self.navigationController = [[[UINavigationController alloc] initWithRootViewController:self.parametersViewController] 
+		                                 autorelease];
+		    UIBarButtonItem *doneButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone 
+		                                                                                    target:self
+		                                                                                    action:@selector(hideParametersView:)];
+		    self.parametersViewController.navigationItem.rightBarButtonItem = doneButtonItem;
+		    [doneButtonItem release];
 
-			    [self presentModalViewController:self.navigationController animated:YES];
-			}
+		    [self presentModalViewController:self.navigationController animated:YES];
+		}
 	</code></pre>
 	Hiding the parameters UI:
 
@@ -74,9 +74,7 @@ Integrate EngineSupport functionality
 
 	You can access a parameter value through the Parameters singleton class, like this:
 
-	<pre><code>
-		int parameterValue = [[Parameters sharedInstance] valueForParameterWithName:@"ES_TEST_PARAMETER_INTEGER"] intValue];
-	</code></pre>
+	<pre><code>int parameterValue = [[Parameters sharedInstance] valueForParameterWithName:@"ES_TEST_PARAMETER_INTEGER"] intValue];</code></pre>
 
 * Define blocks, which will be called on parameter update, like this:
 
