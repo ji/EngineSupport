@@ -36,7 +36,7 @@ Integrate EngineSupport functionality
 	
 * Set the parameters filename in your application delegate:
 
-	<code>[Parameters sharedInstance].parametersDefinitionFilename = @"EngineSupportTest-Parameters.plist";</code>
+	<pre><code>[Parameters sharedInstance].parametersDefinitionFilename = @"EngineSupportTest-Parameters.plist";</code></pre>
 	
 * Add a possibility to call the parameters UI (Excerpts from the EngineSupport project):
 
